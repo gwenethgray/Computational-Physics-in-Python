@@ -21,9 +21,16 @@ N = 1000
 
 random_numbers = [R/rng.modulus for R in rng.sampleN(N)]
 exp_numbers = [-mu*log(1 - R) for R in random_numbers]
+mean = sum(exp_numbers)/N
 
 import matplotlib.pyplot as plt
 
 plt.figure()
+plt.title("Random Sampling of Exponential Probability Distribution")
+plt.xlabel("Random Number")
+plt.ylabel("Frequency")
 plt.hist(exp_numbers, bins=20)
+plt.vlines(mean, 0, 350, color="black", ls="--", label=f"Mean: {mean}")
+plt.legend()
+plt.savefig("non-uniform_sampling.png", dpi=100)
 plt.show()

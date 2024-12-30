@@ -52,6 +52,10 @@ for theta0 in [43 + i for i in range(5)]:
 	line, = ax.plot(x, y, label=f"{theta0} degrees")
 
 ax.set_ylim(0, 10)
+plt.title("Parabolic Motion of a Projectile")
+plt.xlabel("X (m)")
+plt.ylabel("Y (m)")
 plt.grid()
 plt.legend()
+plt.savefig("projectile_motion.png", dpi=100)
 plt.show()

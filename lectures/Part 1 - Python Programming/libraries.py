@@ -31,7 +31,7 @@ mags = [math.hypot(p.x, p.y) for p in posns]
 # it is very important to consider computational complexity for physics applications, because un-optimized code can take too much time to run
 import time
 
-N_posns = [10**i for i in range(2,7)]
+N_posns = [10**i for i in range(2,8)]
 T_with_power_operators = []
 T_with_hypot = []
 
@@ -49,7 +49,11 @@ for N in N_posns:
 
 
 plt.figure()
+plt.title("Time Complexity of ** Operator vs Math.hypot()")
+plt.xlabel("Computations of Vector Magnitude")
+plt.ylabel("Time (s)")
 plt.plot(N_posns, T_with_power_operators, label="** Operators")
 plt.plot(N_posns, T_with_hypot, label="Math.hypot()")
 plt.legend()
+plt.savefig("algorithmic_complexity.png", dpi=100)
 plt.show()

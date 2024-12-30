@@ -34,6 +34,7 @@ class MCG:
 		return numbers
 
 
+# prevents this module from creating a plot when imported elsewhere
 if __name__ == '__main__':
 	rng = MCG()
 
@@ -44,6 +45,10 @@ if __name__ == '__main__':
 	import matplotlib.pyplot as plt
 
 	plt.figure()
+	plt.title("Uniformity of Multiplicative Congruential Generator")
+	plt.xlabel("Random Number")
+	plt.ylabel("Frequency")
 	plt.hist(random_numbers, bins=20)
 	plt.hlines(N/20, 0, 1, ls="--", color="black", zorder=10)
+	plt.savefig("congruential_generator_uniformity.png", dpi=100)
 	plt.show()

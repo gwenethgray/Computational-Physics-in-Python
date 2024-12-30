@@ -66,6 +66,9 @@ ax.scatter([3 - dx, 3, 3 + dx], [square(3 - dx), square(3), square(3 + dx)], col
 
 # details
 ax.grid()
+plt.title("Comparison of Finite Difference Algorithms")
+plt.xlabel("X")
+plt.ylabel("Y")
 plt.legend()
-
+plt.savefig("finite_difference_algorithms.png", dpi=100)
 plt.show()

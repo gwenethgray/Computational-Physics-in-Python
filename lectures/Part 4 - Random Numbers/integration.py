@@ -53,9 +53,14 @@ for i in range(N):
 		not_in_circle_x.append(x)
 		not_in_circle_y.append(y)
 
-print(f"Pi = {A*len(in_circle_x)/N}")
+pi = A*len(in_circle_x)/N
+print(f"Pi = {pi}")
 
-plt.scatter(in_circle_x, in_circle_y, color="blue")
-plt.scatter(not_in_circle_x, not_in_circle_y, color="red")
-
+plt.title("Estimation of Pi by Monte Carlo Integration")
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.scatter(in_circle_x, in_circle_y, color="blue", s=0.5, label=f"Pi ~ {pi}")
+plt.scatter(not_in_circle_x, not_in_circle_y, color="red", s=0.5)
+plt.legend()
+plt.savefig("monte-carlo_integration.png", dpi=100)
 plt.show()

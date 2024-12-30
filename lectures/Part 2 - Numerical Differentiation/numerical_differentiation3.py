@@ -28,4 +28,8 @@ import matplotlib.pyplot as plt
 
 plt.figure()
 plt.plot(times, N)
+plt.title("Euler's Method Approximation of Radioactive Decay")
+plt.xlabel("Time (hr)")
+plt.ylabel("Number of Atoms")
+plt.savefig("euler_radioactive_decay.png", dpi=100)
 plt.show()

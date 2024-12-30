@@ -37,4 +37,8 @@ import matplotlib.pyplot as plt
 
 plt.figure()
 plt.plot(t, y)
+plt.title("Free Fall due to Gravity")
+plt.xlabel("Time (s)")
+plt.ylabel("Height (m)")
+plt.savefig("freefall.png", dpi=100)
 plt.show()

@@ -25,5 +25,9 @@ for dx in [1.0, 0.5, 0.1, 0.05]:
 	dydx = [forward_fd(sin, a, dx) for a in x]
 	line, = ax.plot(x, dydx, label=f"dx = {dx}")
 
+plt.title("Convergence of Forward Finite Difference Algorithm")
+plt.xlabel("X")
+plt.ylabel("Y")
 plt.legend()
+plt.savefig("forward_finite_difference.png", dpi=100)
 plt.show()
