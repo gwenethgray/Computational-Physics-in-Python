@@ -49,8 +49,8 @@ for N in N_posns:
 
 
 plt.figure()
-plt.title("Time Complexity of ** Operator vs Math.hypot()")
-plt.xlabel("Computations of Vector Magnitude")
+plt.title("Time Complexity of Vector Magnitude Computations")
+plt.xlabel("Number of Vectors")
 plt.ylabel("Time (s)")
 plt.plot(N_posns, T_with_power_operators, label="** Operators")
 plt.plot(N_posns, T_with_hypot, label="Math.hypot()")
