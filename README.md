@@ -10,3 +10,4 @@ This repository contains code snippets for an introductory course on Python prog
 5. **Collisions:** *Hard Sphere Molecular Dynamics, Boundary Conditions, Animation, Heat Bath*
 6. **Thermodynamics:** *Thermodynamic Average, Ising Model & Metropolis Algorithm, 1D Heat Equation*
 7. **Oscillations:** *Simple Harmonic Motion, 1D Standing Waves, Harmonic Modes, Fourier Decomposition*
+8. **Radiation:** *Exponential Attenuation, Compton Scattering, Bremsstrahlung*
