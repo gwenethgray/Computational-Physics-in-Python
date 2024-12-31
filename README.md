@@ -2,11 +2,11 @@
 
 This repository contains code snippets for an introductory course on Python programming with a focus on computational physics applications. It is intended for people with a beginner-level programming proficiency AND/OR people who know how to program but have limited physics education and would like to learn a new way to apply their skills.
 
-Learners are expected to have studied elementary calculus, trigonometry, and probability; and they should already be familiar with a variety of physics concepts, such as the kinematic equations, conservation of momentum, radioactive decay, thermal equilibrium, oscillation, and electrostatic attraction. General scientific computing techniques such as descriptive statistics, curve fitting, and hypothesis testing will not be covered, although the problem of mitigating error propagation by selecting simulation parameters wisely will appear often.
+Learners are expected to have studied elementary calculus, trigonometry, and probability; and they should already be familiar with a variety of physics concepts, such as the kinematic equations, conservation of momentum, radioactive decay, thermal equilibrium, oscillation, and electrostatic attraction. General scientific computing techniques—such as descriptive statistics, curve fitting, root finding, hypothesis testing, and matrix solutions of linear systems—will not be covered.
 
 ### Topics:
 1. **Programming Review:** *Data, Functions, Classes, Libraries, Plotting, Algorithmic Complexity*
-2. **Numerical Differentiation:** *Finite Difference Methods, Euler's Method, Taylor Series*
+2. **Numerical Differentiation and Integration:** *Finite Difference Methods, Euler's Method, Verlet Integration, Discretization Error*
 3. **Kinematics:** *Free Fall, Drag Force, Parabolic Motion*
 4. **Random Numbers:** *Congruential Generators, Non-Uniform Sampling, Monte Carlo Integration, Brownian Motion*
 5. **Collisions:** *Hard Sphere Molecular Dynamics, Periodic and Reflective Boundary Conditions, Heat Bath*
