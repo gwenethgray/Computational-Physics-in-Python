@@ -20,17 +20,19 @@ class MCG:
 		self.last_number = (multiplier * seed) % modulus
 		self.sequence = [] # collect the random numbers for repeatability
 
-	def sample(self):
-		R = (self.multiplier * self.last_number) % modulus
+	def sample(self, low=0, high=modulus):
+		R = (self.multiplier * self.last_number) % modulus # 0 <= R < modulus
 		self.last_number = R
 		self.sequence.append(R)
+		# scale to lower and upper sampling limits
+		R = low + (high - low)*(R / self.modulus)
 		return R
 
-	def sampleN(self, N):
+	def sampleN(self, N, low=0, high=modulus):
 		# sample N numbers
 		numbers = []
 		for i in range(N):
-			numbers.append(self.sample())
+			numbers.append(self.sample(low, high))
 		return numbers
 
 
@@ -40,7 +42,7 @@ if __name__ == '__main__':
 
 	# check uniformity of distribution
 	N = 10000
-	random_numbers = [R/rng.modulus for R in rng.sampleN(N)]
+	random_numbers = rng.sampleN(N, 0, 1) # scale to 0 <= R < 1
 
 	import matplotlib.pyplot as plt
 

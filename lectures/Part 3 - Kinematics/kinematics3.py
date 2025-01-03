@@ -10,10 +10,10 @@ class Particle:
 
 	# solve equations of motion after a time interval dt
 	def euler(self, fx, fy, dt):
-		self.x = self.x + self.vx*dt
-		self.y = self.y + self.vy*dt
 		self.vx = self.vx + (fx/self.m)*dt
 		self.vy = self.vy + (fy/self.m)*dt
+		self.x = self.x + self.vx*dt
+		self.y = self.y + self.vy*dt
 
 from math import cos, sin, pi
 

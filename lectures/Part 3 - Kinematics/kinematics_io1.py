@@ -1,8 +1,4 @@
-# equations of motion are a second-order problem because we have to compute acceleration
-
-# example 1: free fall due to gravity
-# v(t) = dy/dt
-# a(t) = dv/dt = F(t)/m
+# generating data for a simulation, writing it to a file, and then reading that file to plot the data
 
 class Particle:
 	def __init__(self, m, y, v):
@@ -21,24 +17,17 @@ gforce = -g*mass # kg m/s^2
 y0 = 100 # m
 v0 = 0 # m/s
 dt = 0.5 # s
+t = [0]
 
 p = Particle(m=mass, y=y0, v=v0)
 
-y = [y0]
-t = [0]
+f = open("freefall_data.csv", "w")
+f.write("t,y\n") # header with newline character \n
 
 while p.y > 0:
-	fy = gforce # constant for now
+	f.write(f"{t[-1]},{p.y}\n") # write current time and position
+	fy = gforce # constant
 	p.euler(fy, dt)
-	y.append(p.y)
 	t.append(t[-1] + dt)
 
-import matplotlib.pyplot as plt
-
-plt.figure()
-plt.plot(t, y)
-plt.title("Free Fall due to Gravity")
-plt.xlabel("Time (s)")
-plt.ylabel("Height (m)")
-plt.savefig("freefall.png", dpi=100)
-plt.show()
+f.close()

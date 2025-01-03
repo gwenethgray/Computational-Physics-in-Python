@@ -19,7 +19,7 @@ from math import exp, log
 mu = 1
 N = 1000
 
-random_numbers = [R/rng.modulus for R in rng.sampleN(N)]
+random_numbers = rng.sampleN(N, 0, 1)
 exp_numbers = [-mu*log(1 - R) for R in random_numbers]
 mean = sum(exp_numbers)/N
 

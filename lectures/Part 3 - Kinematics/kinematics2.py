@@ -25,8 +25,8 @@ class Particle:
 
 	# solve equations of motion after a time interval dt
 	def euler(self, force, dt):
-		self.y = self.y + self.v*dt
 		self.v = self.v + (force/self.m)*dt
+		self.y = self.y + self.v*dt
 
 
 p1 = Particle(m=mass, y=y0, v=v0) # this one will feel drag

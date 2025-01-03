@@ -31,8 +31,8 @@ ax.set_xlim(0, 2*r)
 ax.set_ylim(0, 2*r)
 
 N = 100000
-random_numbers_x = [R/rng.modulus for R in rng.sampleN(N)]
-random_numbers_y = [R/rng.modulus for R in rng.sampleN(N)]
+random_numbers_x = rng.sampleN(N, 0, 1)
+random_numbers_y = rng.sampleN(N, 0, 1)
 
 in_circle_x = []
 in_circle_y = []
